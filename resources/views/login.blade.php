@@ -18,16 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/contacts">Contatti</a>
+          <a class="nav-link active" aria-current="page" href="/contacts">Contattaci</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/userprofile">Profilo utente</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
     </div>

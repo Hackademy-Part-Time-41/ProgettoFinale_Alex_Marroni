@@ -1,19 +1,12 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/', [PageController::class, 'index'])->name('index');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [PageController::class, 'login'])->name('login');
 
-Route::get('/userprofile', function () {
-    return view('userprofile');
-});
+Route::get('/userprofile', [PageController::class, 'userprofile'])->name('userprofile');
