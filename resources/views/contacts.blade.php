@@ -1,16 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contatti</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
     <x-main-layout>
-        <h1> Homepage </h1>
-    </x-main-layout>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+      <div>
+        <x-success/>
+        <h1>Contattaci</h1>
+      </div>
+        <form action="{{route('feedback.send')}}" method="POST">
+        @csrf
+        <div class="mb-3">
+        <label for="name" class="form-label">Nome utente</label>
+        <input  name="name" type="text" class="form-control" id="name">
+           <label for="exampleInputEmail1" class="form-label">Indirizzo Email</label>
+           <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Non condivideremo mai la tua email con nessuno.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <textarea name="message" id="" cols="60" rows="10"></textarea>
+          <label class="form-check-laber" for="feedback">Scrivi qui...</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Invia</button>
+      </form>
+          </form>
+          </x-main-layout>

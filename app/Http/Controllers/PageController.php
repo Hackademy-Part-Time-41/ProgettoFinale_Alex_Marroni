@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -14,11 +15,25 @@ class PageController extends Controller
         return view('contacts');
     }
 
+    public function feedbackSend(Request $request) {
+        return redirect()->back()->with('success','Abbiamo ricevuto la tua segnalazione');
+    }
+
     public function login() {
         return view('login');
     }
 
     public function userprofile() {
         return view('userprofile');
+    }
+
+    public function database() {
+
+        $article = new Article;
+        $article->title = 'Titolo dell\'articolo';
+        $article->body = 'Corpo dell\'articolo';
+
+        $article->save();
+
     }
 }

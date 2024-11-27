@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'welcome'])->name('welcome');
 
 Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
+Route::post('feedback/send',[PageController::class, 'feedbackSend'])->name('feedback.send');
 
 Route::get('/login', [PageController::class, 'login'])->name('login');
 
