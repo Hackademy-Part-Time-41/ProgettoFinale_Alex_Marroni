@@ -15,6 +15,7 @@ class PageController extends Controller
         return view('contacts');
     }
 
+
     public function feedbackSend(Request $request) {
         return redirect()->back()->with('success','Abbiamo ricevuto la tua segnalazione');
     }
@@ -27,13 +28,4 @@ class PageController extends Controller
         return view('userprofile');
     }
 
-    public function database() {
-
-        $article = new Article;
-        $article->title = 'Titolo dell\'articolo';
-        $article->body = 'Corpo dell\'articolo';
-
-        $article->save();
-
-    }
 }

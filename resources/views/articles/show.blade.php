@@ -1,7 +1,6 @@
 <x-main-layout>
-<img src="{{$article['image']}}" alt="">
-<h1> {{$article['title']}} </h1>
-<div class="mx-5">
-    <P>{{$article['body']}}</p>
-</div>
+<h1> Buona lettura!</h1>
+
+<x-card class="col-4" :title="$article->title" :body="$article->body" :image="$article->image" :author="$article->author" />
+
 </x-main-layout>

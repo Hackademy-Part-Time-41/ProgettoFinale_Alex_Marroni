@@ -9,9 +9,13 @@ Route::get('/', [PageController::class, 'welcome'])->name('welcome');
 Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
 Route::post('feedback/send',[PageController::class, 'feedbackSend'])->name('feedback.send');
 
+Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+
 Route::get('/login', [PageController::class, 'login'])->name('login');
 
 Route::get('/userprofile', [PageController::class, 'userprofile'])->name('userprofile');
 
 Route::get('/articles/index',[ArticleController::class,'index'])->name('articles.index');
-Route::get('/articles/show{article}',[ArticleController::class,'show'])->name('articles.show');
+Route::get('/articles/show/{article}',[ArticleController::class,'show'])->name('articles.show');
+
+Route::post('/articles/store',[ArticleController::class,'store'])->name('articles.store');
