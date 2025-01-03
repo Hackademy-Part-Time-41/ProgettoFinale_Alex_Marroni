@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function welcome() {
-        return view('welcome');
+        return view('welcome',['articles'=>Article::orderBy('created_at','DESC')->limit(4)->get()]);
     }
 
     public function contacts() {
@@ -22,10 +23,6 @@ class PageController extends Controller
 
     public function login() {
         return view('login');
-    }
-
-    public function userprofile() {
-        return view('userprofile');
     }
 
 }

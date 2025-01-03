@@ -10,13 +10,12 @@
         <div class="mb-3">
             <label for="name" class="form-label">Nome utente</label>
             <input  name="name" type="text" class="form-control" id="name">
-            <label for="exampleInputEmail1" class="form-label">Indirizzo Email</label>
-            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Non condivideremo mai la tua email con nessuno.</div>
+            <label for="email" class="form-label">Indirizzo Email</label>
+            <input name="email" type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
             </div>
             <div class="mb-3 form-check">
             <textarea name="message" id="" cols="60" rows="10"></textarea>

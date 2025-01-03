@@ -15,20 +15,44 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/articles/index">Archivio</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="/articles/create">Angolo Autori</a>
+          <a class="nav-link" href={{route('articles.index')}}>Archivio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/contacts">Contattaci</a>
+          <a class="nav-link" href={{route('contacts')}}>Contattaci</a>
+        </li>
+        @guest
+        <li class="nav-item">
+          <a class="nav-link" href={{route('register')}}>Registrati</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/userprofile">Profilo utente</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href={{route('login')}}>Accedi</a>
        </ul>
+       @endguest
+       @auth
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sezione Utente
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+            <a class="nav-link" href={{route('articles.dashboard')}}>Dashboard articoli</a>
+            </li>
+            <li>
+            <a class="nav-link" href={{route('authors.index')}}>Dashboard autori</a>
+            </li>
+            <li>
+            <a class="nav-link" href={{route('user.profile')}}>Profilo utente</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+            <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="btn btn-submit">Disconnetti</button>
+            </form>
+            </li>
+          </ul>
+
+       @endauth
     </div>
   </div>
   </nav>

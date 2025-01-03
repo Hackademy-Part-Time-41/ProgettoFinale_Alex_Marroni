@@ -5,5 +5,12 @@
     <p class="card-text">{{$body}}</p>
     <p class="card-text">{{$author}}</p>
     <a href="{{$route ?? '/'}}" class="btn btn-primary">Leggi l'articolo</a>
+    @foreach($categories as $category)
+    <div class="col-auto">
+      <a href="{{route('articles.byCategory',$category)}}">
+      <button class="btn btn-primary">{{$category->name}}</button>
+      </a>
+      </div>
+    @endforeach
   </div>
 </div>

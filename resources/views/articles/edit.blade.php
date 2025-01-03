@@ -1,26 +1,25 @@
+<x-main-layout>
+<h1>Modifica il tuo articolo!</h1>
 
-    <x-main-layout>
-    <x-success></x-success>
-        <h1>Scrivi il tuo articolo!</h1>
         <div class="row">
         <div class="col-4 mx-auto mt-5">
-            <form action="{{route('articles.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('articles.update',$article)}}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <label for="title">Titolo</label>
-            <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="title" value="{{old('title')}}">
+            <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="title" value="{{old('title',$article->title)}}">
             @error('title')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
             <label for="body">Testo</label>
-            <input class="form-control @error('body') is-invalid @enderror" type="text" name="body" id="body" cols="60" rows="10" value="{{old('body')}}">
+            <input class="form-control @error('body') is-invalid @enderror" type="text" name="body" id="body" cols="60" rows="10" value="{{old('body',$article->body)}}">
             @error('body')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
-            <label for="author_id">Autore</label>
-                       <select name="author_id" id="author" class="form-control">
-             <option value="" selected>Scegli l'autore</option>
+            <label for="author">Autore</label>
+             <select name="author_id" id="author" class="form-control">
                 @foreach ($authors as $author)               
-                    <option value="{{$author->id}}">{{$author->name}} {{$author->surname}}</option>
+                    <option value="{{$author->id}}" @selected($author->id == $article->author->id)>{{$author->name}} {{$author->surname}}</option>
                 @endforeach
             @error('author_id')
             <div class="alert alert-danger">{{$message}}</div>
@@ -28,7 +27,7 @@
             </select>
             @foreach ($categories as $category)
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="{{$category->id}}" name="categories[]" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="{{$category->id}}" name="categories[]" id="flexCheckDefault" @checked($article->categories->contains($category))>
                 <label class="form-check-label" for="flexCheckDefault">
                     {{$category->name}}
                 </label>
@@ -37,9 +36,9 @@
             <label for="image">Carica un'immagine</label>
             <input type="file" name="image" id="image" class="form-control">
 
-            <button type="submit" class="btn btn-primary mt-3">Invia</button>
+            <button type="submit" class="btn btn-primary mt-3">Invia le modifiche</button>
             </form>
             
         </div>
         </div>
-    </x-main-layout>
+</x-main-layout>

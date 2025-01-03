@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('articles', function (Blueprint $table) {
-            $table->id();
-            $table->string('title', 50);
-            $table->text('body');
-            $table->timestamps();
+        Schema::table('authors', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -24,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('articles');
+        Schema::table('authors', function (Blueprint $table) {
+            $table->dropForeign('user_id');
+            $table->dropColumn('user_id');
+        });
     }
 };
