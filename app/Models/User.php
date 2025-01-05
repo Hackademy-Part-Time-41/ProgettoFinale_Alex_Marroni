@@ -49,4 +49,8 @@ class User extends Authenticatable
     public function authors(){
         return $this->hasMany(Author::class);
     }
+
+    public function articles(){
+        return $this->hasManyThrough(Article::class,Author::class);
+    }
 }

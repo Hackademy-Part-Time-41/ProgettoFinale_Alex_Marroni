@@ -1,0 +1,82 @@
+
+
+.bg {
+    background-color: #e5e6d5;
+}
+
+.nav_class {
+    background-color: rgb(177, 216, 159);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.card {
+    border-radius: 8px;
+    background-color: #ceebb1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.card2 {
+    border-radius: 8px;  
+    background-color: #767e6e;
+    color: rgb(247, 244, 244);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 2px);
+    border-top-right-radius: calc(0.25rem - 2px);
+    height: 15vw;
+    object-fit: cover;
+  }
+
+
+.btn_cat {
+    background-color: #94f0ab;
+    color: rgb(8, 8, 8);
+    border-radius: 8px;
+    border: 2px solid rgb(43, 223, 103);
+    opacity: 0.7;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn1 {
+    background-color:rgb(59, 221, 194);
+    border-radius: 8px;
+    border: 2px solid rgb(31, 104, 55);
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn_modify {
+    background-color:rgb(41, 238, 68);
+    border-radius: 8px;
+    border: 2px solid rgb(31, 104, 55);
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn_delete {
+    background-color:rgb(204, 47, 47);
+    border-radius: 8px;
+    border: 2px solid rgb(121, 5, 5);
+    opacity: 0.8;
+    color:rgb(255, 255, 255)
+}
+
+a {
+    color:rgb(82, 7, 78)
+}
+
+.table {
+    width: 50%;
+}
+
+
+
+

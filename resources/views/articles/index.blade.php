@@ -6,7 +6,7 @@
 
 
 
-            <x-card class="col-4" :title="$article->title" :categories="$article->categories" :body="$article->body" :image="asset($article->image)" :author="$article->author->name.' '.$article->author->surname" :route="route('articles.show', $article->id)" />
+            <x-card :article="$article"/>
 
         @endforeach
 </x-main-layout>

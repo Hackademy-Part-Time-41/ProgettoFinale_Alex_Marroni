@@ -36,7 +36,7 @@
             <label for="image">Carica un'immagine</label>
             <input type="file" name="image" id="image" class="form-control">
 
-            <button type="submit" class="btn btn-primary mt-3">Invia le modifiche</button>
+            <button type="submit" class="btn_modify btn-primary mt-3">Invia le modifiche</button>
             </form>
             
         </div>

@@ -21,7 +21,7 @@
             <textarea name="message" id="" cols="60" rows="10"></textarea>
             <label class="form-check-laber" for="feedback">Scrivi qui...</label>
             </div>
-            <button type="submit" class="btn btn-primary">Invia</button>
+            <button type="submit" class="btn1 btn-primary">Invia</button>
 
       </div>
       </div>

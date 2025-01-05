@@ -18,7 +18,7 @@
              @error('password')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
-            <button type="submit" class="btn btn-primary">Accedi</button>
+            <button type="submit" class="btn1 btn-primary">Accedi</button>
         </form>
         </div>
         </div>
