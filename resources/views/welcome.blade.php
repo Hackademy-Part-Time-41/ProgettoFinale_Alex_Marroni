@@ -21,6 +21,6 @@
         @endforeach
             </div>
         </div>
-        <hr>
+        
     </x-main-layout>
   </body>

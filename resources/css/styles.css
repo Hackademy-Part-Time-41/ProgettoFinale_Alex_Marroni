@@ -11,7 +11,7 @@
 
 .card {
     border-radius: 8px;
-    background-color: #ceebb1;
+    background-color: rgb(177, 216, 159);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     position: fixed;
     left: 0;
@@ -37,7 +37,7 @@
 
 
 .btn_cat {
-    background-color: #94f0ab;
+    background-color: rgb(177, 216, 159);
     color: rgb(8, 8, 8);
     border-radius: 8px;
     border: 2px solid rgb(43, 223, 103);
@@ -46,7 +46,7 @@
 }
 
 .btn1 {
-    background-color:rgb(59, 221, 194);
+    background-color:rgb(177, 216, 159);
     border-radius: 8px;
     border: 2px solid rgb(31, 104, 55);
     opacity: 0.8;

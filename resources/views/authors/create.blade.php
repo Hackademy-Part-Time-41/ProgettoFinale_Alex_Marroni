@@ -21,7 +21,7 @@
             @error('phone')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
-            <button type="submit" class="btn btn-primary mt-3">Crea autore</button>
+            <button type="submit" class="btn1 btn-primary mt-3">Crea autore</button>
             </form>
             
         </div>
